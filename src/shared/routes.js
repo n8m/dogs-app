@@ -1,17 +1,16 @@
-import Home from './Home'
-import Grid from './Grid'
-import { fetchPopularRepos } from './api'
+import GameContainer from './GameContainer'
+import Results from './Results'
 
 const routes =  [
   {
     path: '/',
     exact: true,
-    component: Home,
+    component: GameContainer,
   },
   {
-    path: '/popular/:id',
-    component: Grid,
-    fetchInitialData: (path = '') => fetchPopularRepos(path.split('/').pop())
+    path: '/results/:name',
+    component: Results
+    // fetchInitialData: (path = '') => fetchPopularRepos(path.split('/').pop())
   }
 ]
 

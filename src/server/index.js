@@ -37,7 +37,22 @@ app.get("*", (req, res, next) => {
           <script>window.__INITIAL_DATA__ = ${serialize(data)}</script>
         </head>
 
-        <body>
+        <style>
+          .option-button{
+            height: 30px;
+            margin: 5px;
+            font-size: 18px;
+            border-radius: 5px;            
+          }
+          .main-button{
+            height: 60px;
+            font-size: 35px;
+            border-radius:5px;
+            cursor: pointer;
+          }
+        </style>
+
+        <body style="font-family:Arial,sans-serif;">
           <div id="app">${markup}</div>
         </body>
       </html>
