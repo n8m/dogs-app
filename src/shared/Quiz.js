@@ -43,7 +43,7 @@ class Quiz extends React.Component {
         }else{
 
             if(!quiz[step].imageURL){
-                return "<h1 style={{textAlign: 'center'}}>Loading</h1>";
+                return <h1 style={{textAlign: 'center'}}>Loading</h1>;
             }
 
             choices = (step !== true) ? quiz[step].options.map( (option, index) => (<li key={index}><button className="option-button" onClick={this.checkAnswer}>{option}</button></li>)) : "";
